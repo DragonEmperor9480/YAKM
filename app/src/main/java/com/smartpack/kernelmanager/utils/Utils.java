@@ -280,7 +280,12 @@ public class Utils {
     }
 
     public static String readAssetFile(Context context, String file) {
-        return sFileUtils.readAssetFile(file, context);
+        try {
+            return sFileUtils.readAssetFile(file, context);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public static boolean useFahrenheit(Context context) {
