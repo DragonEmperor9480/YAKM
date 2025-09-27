@@ -54,7 +54,7 @@ import in.sunilpaulmathew.sCommon.CommonUtils.sExecutor;
 public class ViewUtils {
 
     public static Drawable getSelectableBackground(Context context) {
-        TypedArray typedArray = context.obtainStyledAttributes(new int[]{R.attr.selectableItemBackground});
+        TypedArray typedArray = context.obtainStyledAttributes(new int[]{android.R.attr.selectableItemBackground});
         Drawable drawable = typedArray.getDrawable(0);
         typedArray.recycle();
         return drawable;
@@ -80,7 +80,7 @@ public class ViewUtils {
     }
 
     public static float getActionBarSize(Context context) {
-        TypedArray typedArray = context.obtainStyledAttributes(new int[]{R.attr.actionBarSize});
+        TypedArray typedArray = context.obtainStyledAttributes(new int[]{androidx.appcompat.R.attr.actionBarSize});
         float size = typedArray.getDimension(0, 0);
         typedArray.recycle();
         return size;
@@ -88,19 +88,19 @@ public class ViewUtils {
 
     public static int getColorPrimaryColor(Context context) {
         TypedValue value = new TypedValue();
-        context.getTheme().resolveAttribute(R.attr.colorPrimary, value, true);
+        context.getTheme().resolveAttribute(com.google.android.material.R.attr.colorPrimary, value, true);
         return value.data;
     }
 
     public static int getColorPrimaryDarkColor(Context context) {
         TypedValue value = new TypedValue();
-        context.getTheme().resolveAttribute(R.attr.colorPrimaryDark, value, true);
+        context.getTheme().resolveAttribute(androidx.appcompat.R.attr.colorPrimaryDark, value, true);
         return value.data;
     }
 
     public static int getThemeAccentColor(Context context) {
         TypedValue value = new TypedValue();
-        context.getTheme().resolveAttribute(R.attr.colorAccent, value, true);
+        context.getTheme().resolveAttribute(com.google.android.material.R.attr.colorAccent, value, true);
         return value.data;
     }
 

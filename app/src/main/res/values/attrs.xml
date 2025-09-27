@@ -19,4 +19,7 @@
     <attr name="native_express_id" format="string" />
     <attr name="rcBackgroundColor" format="color"/>
 
+    <!-- Missing attributes for compilation -->
+    <!-- Note: selectableItemBackground, actionBarSize, colorPrimary, colorPrimaryDark, colorAccent are provided by AppCompat/Material -->
+
 </resources>

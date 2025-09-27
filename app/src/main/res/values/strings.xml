@@ -16,6 +16,7 @@
     <string name="press_back_again_exit">Press back again to exit</string>
     <string name="ok">OK</string>
     <string name="yes">YES</string>
+    <string name="cancel">Cancel</string>
     <string name="unknown">Unknown</string>
 
     <string name="warning">Warning!</string>
@@ -1184,4 +1185,11 @@
     <string name="found_bugs_summary">Ans. Please provide as much information as possible (such as what feature, what didn\'t work, screenshots or logcat if possible) and post in the xda-developers page. Alternately, you may also raise an issue in the GitHub page.</string>
     <string name="can_i_contribute">Q9. Can I contribute to your Projects? If so, How?</string>
     <string name="can_i_contribute_summary">Ans. Absolutely. Any kind of contributions (Donations, Code etc.) are most welcomed and highly appreciated. Please visit "About" Section for more details.</string>
+
+    <!-- Missing strings for compilation -->
+    <string name="version">Version</string>
+    <string name="credits">Credits</string>
+    <string name="credits_summary">Contributors and acknowledgments</string>
+    <string name="translations">Translations</string>
+    <string name="translations_summary">Help translate this app</string>
 </resources>

@@ -1,38 +1,95 @@
 <resources>
-    <dimen name="nav_header_height">160dp</dimen>
-
-    <dimen name="nav_header_fab_margin_right">8dp</dimen>
+    <!-- Material 3 Design System Dimensions -->
+    
+    <!-- Spacing Scale -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+    
+    <!-- Corner Radius -->
+    <dimen name="corner_radius_xs">4dp</dimen>
+    <dimen name="corner_radius_sm">8dp</dimen>
+    <dimen name="corner_radius_md">12dp</dimen>
+    <dimen name="corner_radius_lg">16dp</dimen>
+    <dimen name="corner_radius_xl">20dp</dimen>
+    <dimen name="corner_radius_xxl">28dp</dimen>
+    
+    <!-- Elevation -->
+    <dimen name="elevation_none">0dp</dimen>
+    <dimen name="elevation_sm">2dp</dimen>
+    <dimen name="elevation_md">4dp</dimen>
+    <dimen name="elevation_lg">8dp</dimen>
+    <dimen name="elevation_xl">12dp</dimen>
+    
+    <!-- Navigation -->
+    <dimen name="nav_header_height">200dp</dimen>
+    <dimen name="nav_header_fab_margin_right">@dimen/spacing_md</dimen>
     <dimen name="nav_header_fab_margin_left">0dp</dimen>
     <dimen name="nav_header_fab_margin_bottom">0dp</dimen>
     <dimen name="nav_header_fab_margin_top">0dp</dimen>
-
-    <dimen name="recyclerview_fab_margin_right">8dp</dimen>
+    
+    <!-- RecyclerView -->
+    <dimen name="recyclerview_fab_margin_right">@dimen/spacing_md</dimen>
     <dimen name="recyclerview_fab_margin_top">-48dp</dimen>
-    <dimen name="recyclerview_fab_margin_bottom">48dp</dimen>
-
-    <dimen name="app_bar_elevation">10dp</dimen>
-
-    <dimen name="cardview_radius">9dp</dimen>
-    <dimen name="cardview_elevation">3dp</dimen>
-
-    <dimen name="xygraph_height">50dp</dimen>
-    <dimen name="xygraph_width">50dp</dimen>
+    <dimen name="recyclerview_fab_margin_bottom">@dimen/spacing_xxl</dimen>
+    
+    <!-- App Bar -->
+    <dimen name="app_bar_elevation">@dimen/elevation_none</dimen>
+    
+    <!-- Cards -->
+    <dimen name="cardview_radius">@dimen/corner_radius_lg</dimen>
+    <dimen name="cardview_elevation">@dimen/elevation_md</dimen>
+    <dimen name="card_margin">@dimen/spacing_sm</dimen>
+    <dimen name="card_padding">@dimen/spacing_md</dimen>
+    
+    <!-- Graphs and Charts -->
+    <dimen name="xygraph_height">60dp</dimen>
+    <dimen name="xygraph_width">60dp</dimen>
     <dimen name="xygraph_edge_stroke_width">2dp</dimen>
-    <dimen name="xygraph_graph_stroke_width">1dp</dimen>
-
-    <dimen name="dialog_padding">30dp</dimen>
-
-    <dimen name="colortable_width">100dp</dimen>
-    <dimen name="colortable_height">50dp</dimen>
-
-    <dimen name="rv_drop_down_item_height">50dp</dimen>
-
-    <dimen name="banner_min_height">140dp</dimen>
-    <dimen name="banner_default_height">180dp</dimen>
-    <dimen name="banner_max_height">280dp</dimen>
-
-    <dimen name="circleview_height">50dp</dimen>
-    <dimen name="circleview_width">50dp</dimen>
-
-    <dimen name="color_dialog_margin">5dp</dimen>
+    <dimen name="xygraph_graph_stroke_width">1.5dp</dimen>
+    
+    <!-- Dialogs -->
+    <dimen name="dialog_padding">@dimen/spacing_lg</dimen>
+    <dimen name="dialog_margin">@dimen/spacing_md</dimen>
+    <dimen name="dialog_corner_radius">@dimen/corner_radius_xl</dimen>
+    
+    <!-- Color Components -->
+    <dimen name="colortable_width">120dp</dimen>
+    <dimen name="colortable_height">60dp</dimen>
+    <dimen name="color_dialog_margin">@dimen/spacing_sm</dimen>
+    
+    <!-- List Items -->
+    <dimen name="rv_drop_down_item_height">56dp</dimen>
+    <dimen name="list_item_height">72dp</dimen>
+    <dimen name="list_item_padding_horizontal">@dimen/spacing_md</dimen>
+    <dimen name="list_item_padding_vertical">@dimen/spacing_sm</dimen>
+    
+    <!-- Banner -->
+    <dimen name="banner_min_height">160dp</dimen>
+    <dimen name="banner_default_height">200dp</dimen>
+    <dimen name="banner_max_height">320dp</dimen>
+    <dimen name="banner_corner_radius">@dimen/corner_radius_lg</dimen>
+    
+    <!-- Circle Views -->
+    <dimen name="circleview_height">56dp</dimen>
+    <dimen name="circleview_width">56dp</dimen>
+    
+    <!-- Buttons -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_corner_radius">@dimen/corner_radius_md</dimen>
+    <dimen name="button_padding_horizontal">@dimen/spacing_lg</dimen>
+    
+    <!-- FAB -->
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_margin">@dimen/spacing_md</dimen>
+    
+    <!-- Bottom Navigation -->
+    <dimen name="bottom_nav_height">80dp</dimen>
+    
+    <!-- Minimum Touch Target -->
+    <dimen name="min_touch_target">48dp</dimen>
+    
 </resources>

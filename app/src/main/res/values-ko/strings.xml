@@ -746,7 +746,7 @@
     <string name="dynamic_fsync">다이내믹 Fsync</string>
     <string name="dynamic_fsync_summary">이것이 활성화되어 있고 화면이 켜져 있으면 fsync 작업이 비동기적으로 작동합니다. 화면이 꺼져 있으면 이 작업이 동기적으로 작동합니다.</string>
     <string name="gentlefairsleepers">Gentle Fair Sleepers</string>
-    <string name="gentlefairsleepers_summary">오직 sleeper를 그것의 서비스의 50% 적게 연결합니다 (Only give sleepers 50% of their service deficit). 이것을 비활성하면 배터지 전원을 살짝 줄일 수 있습니다.</string>
+    <string name="gentlefairsleepers_summary" formatted="false">오직 sleeper를 그것의 서비스의 50% 적게 연결합니다 (Only give sleepers 50% of their service deficit). 이것을 비활성하면 배터지 전원을 살짝 줄일 수 있습니다.</string>
     <string name="arch_power">아치 전원</string>
     <string name="arch_power_summary">아치 전원 작동/절약을 활성화합니다.</string>
     <string name="power_suspend">전원 대기</string>
