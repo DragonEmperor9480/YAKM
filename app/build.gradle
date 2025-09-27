@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         applicationId "com.smartpack.kernelmanager"
-        minSdkVersion 21
+        minSdkVersion 33
         targetSdkVersion 33
         versionCode 177
         versionName "v17.7"
