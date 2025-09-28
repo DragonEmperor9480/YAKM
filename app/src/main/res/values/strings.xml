@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name" translatable="false">SmartPack-Kernel Manager</string>
+    <string name="app_name" translatable="false">YAKM - Yet Another Kernel Manager</string>
 
     <string name="checking_info">Checking info…</string>
     <string name="checking_root">Checking root access</string>
@@ -60,7 +60,7 @@
     <string name="other">Other</string>
 
     <!-- Menus -->
-    <string name="overall">Overall</string>
+    <string name="overall">Home</string>
     <string name="device">Device</string>
     <string name="memory">Memory</string>
     <string name="inputs">Inputs</string>
@@ -88,13 +88,13 @@
     <string name="script_manger">Script Manager</string>
     <string name="on_boot">On Boot</string>
     <string name="settings">Settings</string>
-    <string name="smartpack">SmartPack</string>
+    <string name="smartpack">YAKM</string>
     <string name="about">About</string>
-    <string name="contributors">Contributors</string>
+
     <string name="faq">FAQ</string>
 
-    <!-- Overall -->
-    <string name="overall_summary">Welcome to the home page of SmartPack-Kernel Manager. This page provides very basic information of your device. Advanced kernel tweaking options can be found on respective pages.</string>
+    <!-- Home -->
+    <string name="overall_summary">Welcome to YAKM - Yet Another Kernel Manager. Your device information and system status at a glance.</string>
     <string name="cpu_times">CPU Times</string>
     <string name="offline">Offline</string>
     <string name="core">Core %d</string>
@@ -1140,7 +1140,7 @@
     <string name="default_section_summary">The default tab to be displayed when opening the app!</string>
 
     <!-- About -->
-    <string name="about_me" translatable="false">SmartPack-Kernel Manager is a heavily modified version of \'Kernel Adiutor\', which is originally developed by Willi Ye aka Grarak. All the credits goes to the original developer.</string>
+    <string name="about_me" translatable="false">YAKM (Yet Another Kernel Manager) is a customized fork of SmartPack Kernel Manager, tailored to specific requirements. Built upon the solid foundation of Kernel Adiutor by Willi Ye (Grarak) and enhanced by the SmartPack team.</string>
     <string name="special_mentions">Special Mentions</string>
     <string name="source_code">Source Code</string>
     <string name="source_code_summary">View source code at GitHub</string>
@@ -1192,4 +1192,23 @@
     <string name="credits_summary">Contributors and acknowledgments</string>
     <string name="translations">Translations</string>
     <string name="translations_summary">Help translate this app</string>
+
+    <!-- Home Screen -->
+    <string name="device_info">Device Information</string>
+    <string name="system_status">System Status</string>
+    <string name="performance_overview">Performance Overview</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="device_model">Model</string>
+    <string name="cpu_info">CPU Information</string>
+    <string name="gpu_info">GPU Information</string>
+    <string name="memory_usage">Memory Usage</string>
+    <string name="storage_info">Storage</string>
+    <string name="battery_status">Battery Status</string>
+    <string name="temperature">Temperature</string>
+    <string name="available_memory">Available Memory</string>
+    <string name="used_storage">Used Storage</string>
+    <string name="battery_level">Battery Level</string>
+    <string name="charging_status">Charging Status</string>
+    <string name="cpu_frequency">CPU Frequency</string>
+    <string name="gpu_frequency">GPU Frequency</string>
 </resources>

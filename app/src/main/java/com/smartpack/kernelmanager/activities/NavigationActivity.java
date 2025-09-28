@@ -67,13 +67,13 @@ import com.smartpack.kernelmanager.fragments.kernel.VMFragment;
 import com.smartpack.kernelmanager.fragments.kernel.WakeFragment;
 import com.smartpack.kernelmanager.fragments.kernel.WakelockFragment;
 import com.smartpack.kernelmanager.fragments.other.AboutFragment;
-import com.smartpack.kernelmanager.fragments.other.ContributorsFragment;
+
 import com.smartpack.kernelmanager.fragments.other.FAQFragment;
 import com.smartpack.kernelmanager.fragments.other.SettingsFragment;
 import com.smartpack.kernelmanager.fragments.statistics.DeviceFragment;
 import com.smartpack.kernelmanager.fragments.statistics.InputsFragment;
 import com.smartpack.kernelmanager.fragments.statistics.MemoryFragment;
-import com.smartpack.kernelmanager.fragments.statistics.OverallFragment;
+import com.smartpack.kernelmanager.fragments.statistics.HomeFragment;
 import com.smartpack.kernelmanager.fragments.tools.BackupFragment;
 import com.smartpack.kernelmanager.fragments.tools.BuildpropFragment;
 import com.smartpack.kernelmanager.fragments.tools.CustomControlsFragment;
@@ -180,7 +180,7 @@ public class NavigationActivity extends BaseActivity
     private void initFragments() {
         mFragments.clear();
         mFragments.add(new NavigationActivity.NavigationFragment(R.string.statistics));
-        mFragments.add(new NavigationActivity.NavigationFragment(R.string.overall, OverallFragment.class, R.drawable.ic_dashboard));
+        mFragments.add(new NavigationActivity.NavigationFragment(R.string.overall, HomeFragment.class, R.drawable.ic_home));
         mFragments.add(new NavigationActivity.NavigationFragment(R.string.device, DeviceFragment.class, R.drawable.ic_device));
         if (Device.MemInfo.getInstance().getItems().size() > 0) {
             mFragments.add(new NavigationActivity.NavigationFragment(R.string.memory, MemoryFragment.class, R.drawable.ic_save));
@@ -250,7 +250,7 @@ public class NavigationActivity extends BaseActivity
         mFragments.add(new NavigationActivity.NavigationFragment(R.string.other));
         mFragments.add(new NavigationActivity.NavigationFragment(R.string.profile, ProfileFragment.class, R.drawable.ic_layers));
         mFragments.add(new NavigationActivity.NavigationFragment(R.string.settings, SettingsFragment.class, R.drawable.ic_settings));
-        mFragments.add(new NavigationActivity.NavigationFragment(R.string.contributors, ContributorsFragment.class, R.drawable.ic_people));
+        // YAKM - Contributors section removed
         mFragments.add(new NavigationActivity.NavigationFragment(R.string.faq, FAQFragment.class, R.drawable.ic_help));
         mFragments.add(new NavigationActivity.NavigationFragment(R.string.about, AboutFragment.class, R.drawable.ic_about));
     }
@@ -290,7 +290,7 @@ public class NavigationActivity extends BaseActivity
             }
             getIntent().removeExtra("selection");
         } else if (savedInstanceState == null) {
-            String defaultFragmentName = Prefs.getString("default_section", "OverallFragment", this);
+            String defaultFragmentName = Prefs.getString("default_section", "HomeFragment", this);
             for (Map.Entry<Integer, Class<? extends Fragment>> entry : mActualFragments.entrySet()) {
                 Class<? extends Fragment> fragmentClass = entry.getValue();
                 if (fragmentClass != null && Objects.equals(fragmentClass.getSimpleName(), defaultFragmentName)) {
@@ -313,6 +313,12 @@ public class NavigationActivity extends BaseActivity
             }
         }
         return 0;
+    }
+
+    public void openDrawer() {
+        if (mDrawer != null) {
+            mDrawer.openDrawer(GravityCompat.START);
+        }
     }
 
     public void appendFragments() {

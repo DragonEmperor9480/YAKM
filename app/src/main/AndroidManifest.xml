@@ -102,6 +102,9 @@
             android:exported="false" />
         <activity android:name=".activities.WebViewActivity"
             android:exported="false" />
+        <activity android:name=".activities.SystemActionsActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity android:name=".views.NavHeaderView$MainHeaderActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:exported="false" />

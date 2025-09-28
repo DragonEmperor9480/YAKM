@@ -26,33 +26,41 @@
         <SwitchPreferenceCompat
             android:defaultValue="true"
             android:key="darktheme"
-            android:summary="@string/dark_theme" />
+            android:title="@string/dark_theme"
+            android:summary="Enable dark theme for the app" />
         <SwitchPreferenceCompat
             android:key="materialicon"
-            android:summary="@string/material_icon" />
+            android:title="@string/material_icon"
+            android:summary="Use material design icon" />
         <Preference
             android:key="banner_resizer"
-            android:summary="@string/banner_resizer" />
+            android:title="@string/banner_resizer"
+            android:summary="Resize app banner" />
         <SwitchPreferenceCompat
             android:key="hide_banner"
-            android:summary="@string/hide_banner" />
+            android:title="@string/hide_banner"
+            android:summary="Hide the app banner" />
         <SwitchPreferenceCompat
             android:key="forceenglish"
-            android:summary="@string/force_english" />
+            android:title="@string/force_english"
+            android:summary="Force English language" />
         <SwitchPreferenceCompat
             android:key="useretardedmeasurement"
+            android:title="Temperature Unit"
             android:summary="@string/fahrenheit_summary" />
         <SwitchPreferenceCompat
             android:key="forcecards"
+            android:title="Force Cards"
             android:summary="@string/force_cards_summary" />
         <Preference
             android:key="accent_color"
-            android:summary="@string/accent_color"
-            android:widgetLayout="@layout/preference_color_view" />
+            android:title="@string/accent_color"
+            android:summary="Choose app accent color" />
         <SwitchPreferenceCompat
             android:defaultValue="true"
             android:key="section_icons"
-            android:summary="@string/section_icons" />
+            android:title="@string/section_icons"
+            android:summary="Show icons in navigation sections" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/apply_on_boot">

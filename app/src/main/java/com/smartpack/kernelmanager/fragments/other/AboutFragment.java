@@ -37,7 +37,7 @@ import com.smartpack.kernelmanager.fragments.RecyclerViewFragment;
 import com.smartpack.kernelmanager.utils.Common;
 import com.smartpack.kernelmanager.utils.Utils;
 import com.smartpack.kernelmanager.utils.ViewUtils;
-import com.smartpack.kernelmanager.utils.other.Billing;
+
 import com.smartpack.kernelmanager.views.dialog.Dialog;
 import com.smartpack.kernelmanager.views.recyclerview.CardView;
 import com.smartpack.kernelmanager.views.recyclerview.DescriptionView;
@@ -79,6 +79,11 @@ public class AboutFragment extends RecyclerViewFragment {
         TitleView about = new TitleView();
         about.setText(getString(R.string.app_name));
 
+        DescriptionView forkInfo = new DescriptionView();
+        forkInfo.setDrawable(getResources().getDrawable(R.drawable.ic_info));
+        forkInfo.setTitle("About YAKM");
+        forkInfo.setSummary("YAKM is a fork of SmartPack Kernel Manager with some changes according to my requirement. All the base work is done by the respective developers of SmartPack Kernel Manager devs. I just forked it and made some changes according to my requirement.\n\n- Amrutesh Naregal");
+
         DescriptionView versioninfo = new DescriptionView();
         versioninfo.setDrawable(getResources().getDrawable(R.drawable.ic_on_boot_notification));
         versioninfo.setTitle(getString(R.string.version,"").replace(": ", ""));
@@ -106,8 +111,14 @@ public class AboutFragment extends RecyclerViewFragment {
         DescriptionView sourcecode = new DescriptionView();
         sourcecode.setDrawable(getResources().getDrawable(R.drawable.ic_source));
         sourcecode.setTitle(getString(R.string.source_code));
-        sourcecode.setSummary(getString(R.string.source_code_summary));
-        sourcecode.setOnItemClickListener(item -> Utils.launchUrl("https://github.com/SmartPack/SmartPack-Kernel-Manager", requireActivity()));
+        sourcecode.setSummary("YAKM source code repository");
+        sourcecode.setOnItemClickListener(item -> Utils.launchUrl("https://github.com/amruteshn/YAKM", requireActivity()));
+
+        DescriptionView originalSource = new DescriptionView();
+        originalSource.setDrawable(getResources().getDrawable(R.drawable.ic_source));
+        originalSource.setTitle("Original SmartPack Source");
+        originalSource.setSummary("Original SmartPack Kernel Manager repository");
+        originalSource.setOnItemClickListener(item -> Utils.launchUrl("https://github.com/SmartPack/SmartPack-Kernel-Manager", requireActivity()));
 
         DescriptionView changelogs = new DescriptionView();
         changelogs.setDrawable(getResources().getDrawable(R.drawable.ic_changelog));
@@ -122,18 +133,9 @@ public class AboutFragment extends RecyclerViewFragment {
                 .setPositiveButton(getString(R.string.more), (dialog1, id1) -> Utils.launchWebView(getString(R.string.change_logs), "https://github.com/SmartPack/SmartPack-Kernel-Manager/raw/master/change-logs.md", getActivity()))
                 .show());
 
-        DescriptionView appStore = new DescriptionView();
-        appStore.setDrawable(getResources().getDrawable(Utils.isFDroidFlavor(requireActivity()) ? R.drawable.ic_fdroid : R.drawable.ic_playstore));
-        appStore.setTitle(getString(Utils.isFDroidFlavor(requireActivity()) ? R.string.fdroid : R.string.playstore));
-        appStore.setSummary(getString(Utils.isFDroidFlavor(requireActivity()) ? R.string.fdroid_summary : R.string.playstore_summary));
-        appStore.setOnItemClickListener(item -> Utils.launchUrl(Utils.isFDroidFlavor(requireActivity()) ? "https://f-droid.org/packages/com.smartpack.kernelmanager" :
-                "https://play.google.com/store/apps/details?id=com.smartpack.kernelmanager.pro", requireActivity()));
+        // YAKM - App store references removed
 
-        DescriptionView donatetome = new DescriptionView();
-        donatetome.setDrawable(getResources().getDrawable(R.drawable.ic_donate));
-        donatetome.setTitle(getString(R.string.donations));
-        donatetome.setSummary(getString(R.string.donate_me_summary));
-        donatetome.setOnItemClickListener(item -> Billing.showDonationMenu(requireActivity()));
+        // YAKM - Donation functionality removed
 
         DescriptionView share = new DescriptionView();
         share.setDrawable(getResources().getDrawable(R.drawable.ic_share));
@@ -144,24 +146,23 @@ public class AboutFragment extends RecyclerViewFragment {
             shareapp.setAction(Intent.ACTION_SEND);
             shareapp.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name));
             shareapp.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_app_message,BuildConfig.VERSION_NAME)
-                    + (Utils.isFDroidFlavor(requireActivity()) ? " F-Droid: https://f-droid.org/packages/com.smartpack.kernelmanager"
-                    : " Google Play: https://play.google.com/store/apps/details?id=com.smartpack.kernelmanager.pro"));
+                    + " GitHub: https://github.com/amruteshn/YAKM");
             shareapp.setType("text/plain");
             Intent shareIntent = Intent.createChooser(shareapp, null);
             startActivity(shareIntent);
         });
 
         items.add(about);
+        items.add(forkInfo);
         items.add(versioninfo);
         items.add(licence);
         items.add(support);
         items.add(changelogs);
         items.add(sourcecode);
-        if (Utils.isFDroidFlavor(requireActivity())) {
-            items.add(donatetome);
-        }
+        items.add(originalSource);
+        // YAKM - Donation section removed
         items.add(share);
-        items.add(appStore);
+        // YAKM - App store references removed
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
