@@ -44,6 +44,40 @@
         
         <!-- Custom attributes -->
         <item name="banner_frame_drawable">@drawable/drawable_frame_light</item>
+        
+        <!-- Preference Theme -->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Modern</item>
+    </style>
+
+    <!-- Modern Preference Theme -->
+    <style name="PreferenceThemeOverlay.Modern" parent="PreferenceThemeOverlay.v14.Material">
+        <!-- Make text more visible -->
+        <item name="android:textColorPrimary">?attr/colorOnSurface</item>
+        <item name="android:textColorSecondary">?attr/colorOnSurfaceVariant</item>
+        
+        <!-- Category title styling -->
+        <item name="preferenceCategoryTitleTextColor">?attr/colorPrimary</item>
+        
+        <!-- Custom preference layout -->
+        <item name="preferenceStyle">@style/Preference.Modern</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat.Modern</item>
+        
+        <!-- Remove dividers for cleaner look -->
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+        
+        <!-- Better background -->
+        <item name="android:colorBackground">?attr/colorSurface</item>
+    </style>
+
+    <!-- Modern Preference Style -->
+    <style name="Preference.Modern" parent="Preference.Material">
+        <item name="android:layout">@layout/preference_material_modern</item>
+    </style>
+
+    <!-- Modern Switch Preference Style -->
+    <style name="Preference.SwitchPreferenceCompat.Modern" parent="Preference.SwitchPreferenceCompat.Material">
+        <item name="android:layout">@layout/preference_material_modern</item>
     </style>
 
     <!-- Modern Card Style -->
@@ -101,5 +135,7 @@
     <style name="Preference.SwitchPreferenceCompat.Material" parent="Preference.SwitchPreferenceCompat">
         <item name="android:layout">@layout/preference_widget_switch_compat</item>
     </style>
+
+
 
 </resources>

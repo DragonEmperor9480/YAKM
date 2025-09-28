@@ -45,7 +45,12 @@
         
         <!-- Custom attributes -->
         <item name="banner_frame_drawable">@drawable/drawable_frame_dark</item>
+        
+        <!-- Preference Theme -->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Modern</item>
     </style>
+
+
 
     <!-- Dark theme specific overrides -->
     <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">

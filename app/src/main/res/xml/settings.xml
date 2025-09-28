@@ -7,16 +7,20 @@
 
         <Preference
             android:key="update_check"
+            android:icon="@drawable/ic_update"
             android:summary="@string/check_update_summary"
             android:title="@string/check_update" />
         <SwitchPreferenceCompat
             android:defaultValue="true"
             android:key="auto_update"
-            android:summary="@string/auto_update_check" />
+            android:icon="@drawable/ic_auto_update"
+            android:summary="@string/auto_update_check"
+            android:title="Auto Update Check" />
     </PreferenceCategory>
 
     <Preference
         android:key="reset_settings"
+        android:icon="@drawable/ic_reset"
         android:summary="@string/reset_settings_summary"
         android:title="@string/reset_settings" />
 
@@ -26,22 +30,27 @@
         <SwitchPreferenceCompat
             android:defaultValue="true"
             android:key="darktheme"
+            android:icon="@drawable/ic_dark_mode"
             android:title="@string/dark_theme"
             android:summary="Enable dark theme for the app" />
         <SwitchPreferenceCompat
             android:key="materialicon"
+            android:icon="@drawable/ic_palette"
             android:title="@string/material_icon"
             android:summary="Use material design icon" />
         <Preference
             android:key="banner_resizer"
+            android:icon="@drawable/ic_crop"
             android:title="@string/banner_resizer"
             android:summary="Resize app banner" />
         <SwitchPreferenceCompat
             android:key="hide_banner"
+            android:icon="@drawable/ic_visibility_off"
             android:title="@string/hide_banner"
             android:summary="Hide the app banner" />
         <SwitchPreferenceCompat
             android:key="forceenglish"
+            android:icon="@drawable/ic_language"
             android:title="@string/force_english"
             android:summary="Force English language" />
         <SwitchPreferenceCompat
@@ -67,6 +76,7 @@
         <SwitchPreferenceCompat
             android:defaultValue="true"
             android:key="enable_onboot"
+            android:icon="@drawable/ic_start"
             android:title="@string/enable_onboot"
             android:summary="@string/enable_onboot_summary" />
         <ListPreference
@@ -74,10 +84,12 @@
             android:entries="@array/apply_on_boot_delay_entries"
             android:entryValues="@array/apply_on_boot_delay_values"
             android:key="applyonbootdelay"
+            android:icon="@drawable/ic_timer"
             android:summary="%s"
             android:title="@string/delay" />
         <Preference
             android:key="applyonboottest"
+            android:icon="@drawable/ic_test"
             android:summary="@string/apply_on_boot_test_summary"
             android:title="@string/test" />
         <SwitchPreferenceCompat
@@ -109,6 +121,7 @@
 
         <SwitchPreferenceCompat
             android:key="use_biometric"
+            android:icon="@drawable/ic_fingerprint"
             android:summary="@string/biometric_summary"
             android:title="@string/biometric" />
     </PreferenceCategory>
